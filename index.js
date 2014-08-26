@@ -16,6 +16,12 @@ exports.substitute = function(string, object, regexp) {
         }
         return sub;
     });
-}
+};
+
+// replace breakline to <br/>
+
+exports.addBreakline = function(txt){
+    return txt.replace(/\r?\n|\r/g, "<br>");
+};
 
 
